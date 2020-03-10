@@ -11,4 +11,16 @@ public class PkuSession {
         return (T)proxyInstance;
     }
 
+    private PkuSession(){
+
+    }
+
+    public static PkuSession getPkuSession(){
+        return InnerPkuSession.PKU_SESSION;
+    }
+
+    private static class InnerPkuSession{
+        private static final PkuSession PKU_SESSION = new PkuSession();
+    }
+
 }

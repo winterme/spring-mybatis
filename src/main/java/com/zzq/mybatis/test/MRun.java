@@ -8,7 +8,7 @@ public class MRun {
 
     public static void main(String[] args) {
 
-        PkuSession pkuSession = new PkuSession();
+        PkuSession pkuSession = PkuSession.getPkuSession();
 
         TDao dao = pkuSession.getMapper(TDao.class);
 
