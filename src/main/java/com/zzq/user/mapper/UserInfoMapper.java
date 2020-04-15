@@ -1,4 +1,4 @@
-package com.zzq.mybatis.mapper;
+package com.zzq.user.mapper;
 
 import com.zzq.mybatis.annotation.Mapper;
 import com.zzq.mybatis.annotation.Select;

@@ -1,5 +1,7 @@
-package com.zzq.mybatis;
+package com.zzq.mybatis.wiredBean;
 
+import com.zzq.mybatis.PkuInvocationHandle;
+import com.zzq.mybatis.PkuSession;
 import com.zzq.mybatis.annotation.Mapper;
 import com.zzq.mybatis.annotation.MapperScanner;
 import javassist.CannotCompileException;
@@ -10,6 +12,8 @@ import org.springframework.beans.factory.config.ConstructorArgumentValues;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.stereotype.Component;
 
@@ -61,7 +65,7 @@ public class AutoConfigurationImport implements ImportBeanDefinitionRegistrar {
             e.printStackTrace();
         }
 
-        // 开始解析扫描包下的 class对象，获取所有有 Mapper 注解覆盖的类
+        // 开始解析扫描包下的 class对象，获取所有有 BaseServiceImpl 注解覆盖的类
         classes.keySet().forEach(beanName -> {
             if (classes.get(beanName).isAnnotationPresent(Mapper.class)) {
                 rootBeanClass.put(beanName, PkuSession.getPkuSession().getMapper(classes.get(beanName)).getClass());

@@ -1,2 +1,13 @@
-server:
-  port: 1209
+#server.port: 1209
+#
+#jdbc:
+#  url: jdbc:mysql://127.0.0.1:3306/licm
+#  username: root
+#  password: root
+#  driver-class: com.mysql.jdbc.Driver
+#  pool:
+#    minsize: 5
+#    maxsize: 15
+logging:
+  level:
+    com.zzq: debug

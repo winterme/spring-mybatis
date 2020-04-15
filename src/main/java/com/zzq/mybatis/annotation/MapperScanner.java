@@ -1,6 +1,6 @@
 package com.zzq.mybatis.annotation;
 
-import com.zzq.mybatis.AutoConfigurationImport;
+import com.zzq.mybatis.wiredBean.AutoConfigurationImport;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.ElementType;
