@@ -16,7 +16,12 @@ public class TDaoServiceImpl extends BaseServiceImpl<Msg> implements TDaoService
     private TDao tDao;
 
     @Override
-    public List list() {
+    public List<Msg> list() {
         return tDao.list();
+    }
+
+    @Override
+    public List<Msg> getByIdAndUserId(String id, String userId) {
+        return tDao.getByIdAndUserId(id, userId);
     }
 }

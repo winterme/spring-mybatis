@@ -11,10 +11,10 @@ import java.util.List;
 public interface TDao {
 
     @Select("select * from msg")
-    public List list();
+    public List<Msg> list();
 
     @Select("select * from msg where id = {id} and user_id = {userid}")
-    public List getById(String id, String userid);
+    public List<Msg> getByIdAndUserId(String id, String userid);
 
 
 }

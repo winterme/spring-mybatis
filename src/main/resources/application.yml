@@ -11,3 +11,6 @@
 logging:
   level:
     com.zzq: debug
+spring:
+  jackson:
+    date-format: yyyyMMddHHmmss

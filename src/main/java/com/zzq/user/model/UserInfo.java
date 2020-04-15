@@ -10,6 +10,7 @@ public class UserInfo implements Serializable {
 
     private String username;
 
+    @Transient
     private String password;
 
     private String title;

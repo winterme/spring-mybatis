@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface TDaoService extends BaseService<Msg> {
 
-    List list();
+    List<Msg> list();
+
+    List<Msg> getByIdAndUserId(String id , String userId);
 
 }
